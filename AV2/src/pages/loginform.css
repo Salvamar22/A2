@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "CustomFont";
+  }
+  
+  .page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Centra verticalmente el contenido en la parte superior */
+    height: 100%;
+    flex-direction: column;
+  }
+  
+  .cover {
+    background-color: white;
+    width: 120%;
+    max-width: 30em;
+    height: 30em; /* Ajusta la altura del contenedor según tus necesidades */
+    position: relative;
+    border-radius: 1em;
+    box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinear los elementos desde la parte superior */
+    padding: 2em;
+  }
+
+  
+  .logo.custom-logo-size {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .alt-login {
+    width: 150%;
+    height: 2em;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .alt-login div {
+    width: 45%;
+    height: 100%;
+    border-radius: 0.25em;
+    background-color: rgb(240, 240, 244);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  
+  .google {
+    background-image: url("../images/google.png");
+    background-color: white;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    border: none;
+    background-color: rgb(240, 240, 244);
+    height: 4em;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0.25em;
+    text-align: center;
+    padding: 2em;
+    margin-bottom: 1em;
+  }
+  
+  input:focus {
+    outline-color: rgb(156, 156, 156);
+  }
+  
+  .login-btn {
+    width: 50%;
+    height: 2em;
+    background-color: #B24BE2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 0.25em;
+    cursor: pointer;
+    margin-top: 1em;
+  }
+  
+  .login-btn:hover {
+    transform: scale(1.25);
+  }
+  
+  .text {
+    margin-top: 1em;
+  }
+  
+  .hide {
+    position: absolute;
+    transform: scale(0);
+  }
+  
+  .login-popup {
+    position: absolute;
+    height: 30em;
+    width: 30em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25em;
+    background-color: bisque;
+    color: white;
+    bottom: 0;
+    transform: scale(1);
+    transform: 1.5s;
+  }
+  
+  /* Media queries para hacerlo responsive */
+  @media (max-width: 768px) {
+    .cover {
+      padding: 1em;
+    }
+  
+    .alt-login div {
+      width: 40%;
+    }
+  
+    .login-btn {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cover {
+      padding: 0.5em;
+    }
+  
+    input[type="text"],
+    input[type="password"] {
+      padding: 1em;
+    }
+  
+    .alt-login {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .alt-login div {
+      width: 80%;
+      margin-bottom: 10px;
+    }
+  
+    .login-btn {
+      width: 70%;
+    }
+  }
+  
